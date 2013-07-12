@@ -52,8 +52,7 @@ func main() {
 	box.AddItem("Nozzle", "45")
   order.AddBox(box, 5)
 
-  
-	clipper.PackingList(order) // generate packing list
+  clipper.PackingList(order) // generate packing list
   clipper.Labels(order)      // generate labels
   // files will appear in the working directory
 }
