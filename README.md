@@ -10,7 +10,7 @@ Example
 package main
 
 import (
-	"clipper"
+  "clipper"
 )
 
 func main() {
@@ -23,10 +23,10 @@ func main() {
   }
 
   to := clipper.Address{
-		"Mega-Lo-Mart",
-		"16 E Grand Ave",
-		"Englewood, CO 80113",
-		"(303) 761-6474","",
+    "Mega-Lo-Mart",
+    "16 E Grand Ave",
+    "Englewood, CO 80113",
+    "(303) 761-6474","",
   }
 
   // specify a purchase order ident
@@ -39,17 +39,17 @@ func main() {
 
   // add a new box to order
   box = clipper.NewBox()
-	box.AddItem("Propane", "20 Gal") // specify a box with item Propane with amount 20 gal
-	box.SetNote("Do not spill")      // set a note for this box
+  box.AddItem("Propane", "20 Gal") // specify a box with item Propane with amount 20 gal
+  box.SetNote("Do not spill")      // set a note for this box
   order.AddBox(box, 2)             // set the number of boxes of the same.
 
   box = clipper.NewBox()
-	box.AddItem("Propane", "30 Gal")
-	box.SetNote("Do not shake")
+  box.AddItem("Propane", "30 Gal")
+  box.SetNote("Do not shake")
   order.AddBox(box, 1)
 
   box = clipper.NewBox()
-	box.AddItem("Nozzle", "45")
+  box.AddItem("Nozzle", "45")
   order.AddBox(box, 5)
 
   clipper.PackingList(order) // generate packing list
